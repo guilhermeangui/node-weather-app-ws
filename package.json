@@ -1,0 +1,28 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Simple NodeJS weather app (for studies)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermeangui/node-weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermeangui/node-weather-app/issues"
+  },
+  "homepage": "https://github.com/guilhermeangui/node-weather-app#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "express": "4.16.4",
+    "hbs": "4.0.1",
+    "postman-request": "^2.88.1-postman.31",
+    "request": "2.88.0",
+    "yargs": "^12.0.2"
+  }
+}
