@@ -21,15 +21,18 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirPath))
 
 const onSearchLocation = (res, { error, data }) => {
-	if ( error ) return console.log(error)
+	if ( error )
+		return res.send({
+			error: error
+		})
 
 	if ( data ) {
 		const { latitude, longitude, location } = data
 
 		if ( !latitude || !longitude || !location ) 
-			return console.log('Error fetching latitude and longitude! :(')
-		
-		// console.log(`Forecast for ${location}`)
+			return res.send({
+				error: 'Error fetching latitude and longitude! :('
+			})
 
 		forecast({
 			latitude,
@@ -40,16 +43,18 @@ const onSearchLocation = (res, { error, data }) => {
 }
 
 const onSearchForecast = (res, { error, data }) => {
-	if ( error ) return console.log(error)
+	if ( error )
+		return res.send({
+			error: error
+		})
 	
 	if ( data ) {
 		const { weather_description, summary } = data
 
 		if ( !weather_description || !summary ) 
-			return console.log('Error fetching weather data! :(')
-		
-		// console.log(weather_description)
-		// console.log(summary)
+			return res.send({
+				error: 'Error fetching latitude and longitude! :('
+			})
 
 		res.send({
 			forecast: weather_description,
