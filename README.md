@@ -1,6 +1,8 @@
 # 🌤 node-weather-app-ws
 Simple NodeJS weather app ws(for studies)
 
+[https://anguissauro-weather-app.herokuapp.com](https://anguissauro-weather-app.herokuapp.com)
+
 ## Usage:
 ### Search for a place you want to know the weather
 nodemon src/app.js -e js,hbs
