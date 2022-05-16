@@ -6,7 +6,7 @@ weatherForm.addEventListener('submit', (e) => {
 	e.preventDefault()
 
 	const addressInputValue = document.querySelector('input').value
-	const queryString = `http://localhost:3000/weather?address=${addressInputValue}`
+	const queryString = `/weather?address=${addressInputValue}`
 
 	resultTitle.textContent = 'Loading...'
 
